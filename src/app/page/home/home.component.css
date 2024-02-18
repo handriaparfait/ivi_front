@@ -1,0 +1,30 @@
+.card:hover .card-content{
+    transition: 2s all ease;
+    transform: translateY(-10px);
+    opacity: 1;
+    display: inline-block;
+    color: white;
+    
+}
+
+.card:hover .card-body{
+    opacity: 0;
+    transform: translateY(-200px);
+}
+
+.card:hover{
+    opacity: 0.2;
+}
+
+.card{
+    opacity: 1;
+}
+
+.card-content{
+    transform: translateY(150px);
+    opacity: 0;
+    display: none;
+    top : 10px;
+    position: absolute;
+    padding: 20px;
+}

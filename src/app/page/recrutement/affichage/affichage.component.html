@@ -1,0 +1,66 @@
+
+
+<br>
+<br>
+<br>
+
+
+<div class="container" style="margin: auto;">
+    <p>Date de Publication : <b>{{ datas.dateCreationAt.split("T")[0] }}</b></p>
+    <p>Intitulé de l'offre : <b>{{datas.Titre}}</b></p>
+    <p>Description de l'offre : <b>{{datas.Description}}</b></p>
+
+    <p>Publier par : <b>{{ datas.user.prenom + ' ' + datas.user.nom  }} </b></p>
+
+    <button type="button" class="btn btn-primary" (click)="fenetrepostuler()" data-toggle="modal" data-target="#exampleModal">
+        Postuler
+      </button>
+      
+      <!-- Modal -->
+      <form action="" method="post" (ngSubmit)="envoyer()" [formGroup]="candidateForm">
+      <div class="modal" tabindex="-1"  role="dialog" [ngStyle]="{'display':displayStyle}">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Postuler</h4>
+              </div>
+              <div class="modal-body">
+
+                <div class="field">
+                  <label for="nom">Nom</label>
+                  <input type="text"  value="{{ donne.user.nom }}" [placeholder]="donne.user.nom" name="nom" class="form-control" formControlName="nom"><br><br>
+                </div>
+                <div class="field">
+                  <label for="prenom">Prenom</label>
+                  <input type="text" value="{{ donne.user.prenom }}" [placeholder]="donne.user.prenom" name="prenom" class="form-control" formControlName="prenom"><br><br>
+                </div>
+                <div class="field">
+                  <label for="email">Email</label>
+                  <input type="email" value="{{ donne.user.email }}" [placeholder]="donne.user.email" name="email" class="form-control" formControlName="email"><br><br>
+                </div>
+                  
+                <input type="file" name="filename" class="form-control" formControlName="filename">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" 
+                        (click)="closefenetre()">
+                  Close
+                </button>
+
+                <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                  Envoyer
+                </button>
+              </div>
+            </div>
+          </div>
+      </div>
+    </form>
+
+</div>
+
+
+
+
+
+<br><br><br>
+<br>

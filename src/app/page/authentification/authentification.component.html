@@ -1,0 +1,53 @@
+<br>
+<br>
+<br>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-5 mx-auto">
+
+            <h1>Se Connecter</h1>
+                <form (ngSubmit)="se_connecter()" [formGroup]="connectForm">
+
+                    <div class="alert alert-success" *ngIf="status === 'success'">
+                        Connection succesfully
+                    </div>
+                
+                    <div class="alert alert-danger" *ngIf="status === 'error'">
+                        Connection error!
+                    </div>
+
+
+
+                    <div class="field">
+                        <label for="telephone">Email</label>
+                        <input type="text" required="required" name="email" class="form-control" formControlName="email" value="{{ data.last_username }}" placeholder="{{ data.last_username }}">
+                    </div>
+                    <div class="field">
+                        <label for="telephone">Mot de passe</label>
+                        <input type="password" required="required" name="password" class="form-control" formControlName="password">
+                    
+                    </div>
+                <!--input type="hidden" name="_token" value=""/-->
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="_remember_me">Remember me
+                    </label>
+                </div>
+                <br>
+                    <button type="submit" class="btn btn-lg btn-block btn-primary" [disabled]="!connectForm.form.valid" >Se connecter</button>
+                    <br>
+                    <p class="mt-5 text-muted">Pas de compte? <a [routerLink]="['/inscription']"> Créer un compte</a></p>
+                </form>
+        </div>
+
+    </div>
+
+    
+</div>
+<br>
+<br>
+<br><br>
+<br>
+<br>

@@ -1,0 +1,41 @@
+#navbarNav a {
+    color: black !important;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+@media (min-width: 1400px){
+    .navbar-nav{
+        margin-left: 20%;
+    }
+}
+
+@media (min-width: 1530px){
+    #entete{
+        margin-left: 8%;
+    }
+}
+
+@media (min-width: 1200px) {
+    #devis {
+        margin-left: 100px;
+    }
+}
+
+#devis {
+    min-width: 200px; background-color: #fde75c; padding-left: 15px; padding-right: 15px;
+}
+
+
+.navbar-nav li {
+    min-width: 130px;
+    text-align: center;
+    display: inline-block;
+}
+
+#menu nav{
+    background-color: white !important;
+}
+
+
+

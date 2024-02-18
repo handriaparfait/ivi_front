@@ -1,0 +1,46 @@
+<br><b><b><br><br></b></b>
+<div class="container">
+    <form (ngSubmit)="Envoyer()" [formGroup]="devisForm">
+        <div class="field">
+            <label for="name">Nom</label>
+            <input type="text" name="nom" class="form-control" formControlName="nom">
+        </div>
+
+        <div class="field">
+            <label for="email">Email</label>
+            <input type="text" name="email" class="form-control" formControlName="email">
+        </div>
+        <div class="field">
+            <label for="telephone">Telephone</label>
+            <input type="text" name="telephone" class="form-control" formControlName="telephone">
+        </div>
+        <br>
+        <div class="field">
+            <label for="message">Cahier de charge?</label>
+            <div>
+                <input type="checkbox" id="scales" name="scales">
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="field">
+            <label for="appercu">Appercu du projet</label>
+            <textarea  name="appercu" class="form-control" formControlName="appercu"></textarea>
+        </div>
+        <br>
+        <div class="field">
+            <label for="comment">Commentaire</label>
+            <textarea  name="comment" class="form-control" formControlName="comment"></textarea>
+        </div>
+        <br>
+        <button type="submit">Envoyer</button>
+    </form>
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

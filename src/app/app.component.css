@@ -1,0 +1,19 @@
+/*.app-header{
+    position: fixed;
+    width: 100%;
+    top: 0; 
+    overflow: hidden;
+    z-index: 2;
+    display: block;
+    
+}
+
+router-outlet + {
+    display: block;
+    
+}*/
+
+*{
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,82 @@
+
+
+
+<div id="rs-header" class="container-fluid" style="padding: 0;">
+    
+    <div class="container-fluid"  style="background-color: blue; padding-top: 20px; padding-bottom: 20px;"><div class="header-inner menu-sticky stuck">                  
+                <ul class="rs-contact-info" id="entete" >
+                    <li class="rs-contact-email" style="display: inline; padding-left: 5%;">
+                      <img src="../assets/email.png" alt="adresse" style="height: 25px; width: 25px; margin-right: 10px;">                        
+                      <a href="mailto:rianmich@gmail.com" style="text-decoration: none; color: white; font-size: 14px;">rianmich@gmail.com</a>                
+                    </li>
+                    
+                    <li class="rs-contact-phone" style="display: inline-block; padding-left: 5%;">
+                      <img src="../assets/tel.png" alt="adresse" style="height: 25px; width: 25px; margin-right: 4px;">                        
+                        <a href="tel:+33753238548" style="text-decoration: none; color: white; font-size: 14px;"> +33 7 53 23 85 48</a>                   
+                    </li>
+                    <li class="rs-hours rs-contact-email" style="display: inline-block; padding-left: 5%; color: white; font-size: 14px;">
+                      <img src="../assets/adresse.png" alt="adresse" style="height: 25px; width: 25px; margin-right: 5px;">                        
+                            Lot IVB 714 Ankazo Ambohimanala, MADAGASCAR                           
+                    </li>  
+
+                    <li class="rs-hours rs-contact-email" style="display: inline-block; font-size: 14px;">
+                      <button type="button" [routerLink]="['/inscription']" class="btn btn-primary" style="color: white !important; font-size: 14px; right: 10%; position: absolute;" [hidden]="!connectBoutton">s'inscrire</button> 
+                    </li>
+
+                    <li class="rs-hours rs-contact-email" style="display: inline-block; font-size: 14px;">
+                      <button type="button" [routerLink]="['/auth']"  class="btn btn-primary" style="color: white !important; font-size: 14px; right: 2%; position: absolute;"  [hidden]="!connectBoutton">se connecter</button> 
+                    </li> 
+                    
+                    <li class="rs-hours rs-contact-email" style="display: inline-block; color: white; font-size: 14px; position: absolute; right: 50px;">
+                      <div class="avatar">
+                        <div [routerLink]="['/user']" [hidden]="!userConnect" class="user-icon" style="border-radius:50%; border:1px solid skyblue;height: 30px;width: 30px;">
+                          
+                          <img   style="height: 30px; width: 30px;" src="../../assets/user.png" alt="">
+                        </div>
+                      </div>
+                      
+                      <!--a [routerLink]="['/user']" *ngIf="data" [hidden]="!userConnect"><img   style="height: 30px; width: 30px; position: absolute; right: 250px;" src="../../assets/user.png" alt="">  </a-->                      
+                     </li>
+
+                     <li class="rs-hours rs-contact-email" style="display: inline-block; padding-left: 5%; color: white; font-size: 14px; position: absolute; right: 50px;">
+                                             
+                     </li> 
+                   
+                </ul>
+              </div>
+      </div>
+          <!-- Toolbar End -->
+    
+    <!-- Header Menu Start -->
+      <div class="container-fluid" id="menu" style="margin: 0 ; padding : 0; ">
+          <nav style="display: flex;" class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+              <img src="../assets/logo.png">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span  class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/']">Accueil</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/activity']">Nos expertises</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/portfolio']">Portfolio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/recrutement']">Recrutement</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/contact']">Contact</a>
+                  </li>
+                </ul>
+                <button type="button" id="devis" class="btn btn-warning "><a class="nav-link" [routerLink]="['/devis']">obtenir un devis</a></button>
+              </div>
+            </div>
+          
+        </nav>
+    </div>
+</div> 

@@ -1,0 +1,64 @@
+<br><b><b><br><br></b></b>
+<div class="container">
+    <div class="row">  
+        
+        <div class="col-md-5 mx-auto">
+
+            <div class="alert alert-success" *ngIf="status === 'success'">
+                Registrated succesfully
+                <a [routerLink]="['/auth']">Login </a>
+            </div>
+
+            <div class="alert alert-danger" *ngIf="status === 'error'">
+                Registration error!
+            </div>
+
+            <h1>S'Inscrire</h1>
+
+            <form (ngSubmit)="inscription(); addForm.reset()" [formGroup]="addForm">
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="field">
+                            <label for="nom">Nom</label>
+                            <input type="text" name="nom" class="form-control" formControlName="nom">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="field">
+                            <label for="prenom">Prénom</label>
+                            <input type="text" name="prenom" class="form-control" formControlName="prenom">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" class="form-control" formControlName="email">
+                </div>
+                <div class="field">
+                    <label for="password">mot de passe</label>
+                    <input type="password" name="password" class="form-control" formControlName="password">
+                </div>
+                <br>
+
+                <button type="submit" class="btn btn-lg btn-block btn-primary">s'inscrire</button>
+        <br>
+        <p class="mt-5 text-muted">Vous avez déjà un compte? <a [routerLink]="['/auth']"> Connectez vous</a></p>
+
+        </form>
+                    
+    </div>
+
+    </div>
+
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
